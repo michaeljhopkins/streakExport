@@ -14,6 +14,7 @@ composer.phar
 /config/.env.yaml
 .vagrant
 
+storage/
 #
 app/storage
 /public/vendor
