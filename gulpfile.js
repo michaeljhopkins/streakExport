@@ -1,6 +1,5 @@
 var gulp = require('gulp'); 
-var bower = require('gulp-bower'); 
-var elixir = require('laravel-elixir'); 
+var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     // Copy fonts straight to public

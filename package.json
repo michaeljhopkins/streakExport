@@ -1,7 +1,8 @@
 {
   "private": true,
   "dependencies": {
-    "laravel-elixir": "*",
-    "bootstrap-sass": "^3.0.0"
+    "bootstrap-sass": "^3.0.0",
+    "gulp": "^3.9.1",
+    "laravel-elixir": "*"
   }
 }
