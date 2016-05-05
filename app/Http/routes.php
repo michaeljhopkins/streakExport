@@ -15,18 +15,11 @@ Route::auth();
 Route::group(['middleware' => ['auth']],function(){
     Route::get('/','HomeController@index');
     Route::get('/home','HomeController@index');
-
-    Route::group(['prefix' => 'export'],function(){
-
-        Route::get('/','HomeController@index');
-        Route::get('boxList','ExportController@boxList');
-    });
-
     Route::get('profile','HomeController@profile');
     Route::get('token','HomeController@token');
     Route::post('token','HomeController@postToken');
-    
-    Route::resource('pipelines','PipelinesController',['only' => ['index']]);
-    Route::resource('pipelines.boxes','BoxesController',['only' => ['index']]);
+
+    Route::get('pipelines','PipelinesController@index');
+    Route::get('pipelines/{id}/boxes','BoxesController@index');
     Route::post('pipelines/{id}/boxes','BoxesController@postBoxList');
 });
